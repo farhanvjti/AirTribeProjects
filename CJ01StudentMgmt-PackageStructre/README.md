@@ -15,3 +15,5 @@ The following points are covered here:
   - Implement at least 4 packages: entity, service, util, main
   - Demonstrate package-private, public access across packages
   - Show proper import statements and FQCN usage
+  - Implement static vs instance variables with proper usage
+  - Demonstrate variable scope (local, instance, static)
