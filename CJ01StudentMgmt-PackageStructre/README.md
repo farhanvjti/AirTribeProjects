@@ -11,7 +11,7 @@ The following points are covered here:
 
 ○ Package Organization (8 points)
 
-  ■ Create proper package hierarchy: com.airtripe.studentmanagement
-  ■ Implement at least 4 packages: entity, service, util, main
-  ■ Demonstrate package-private, public access across packages
-  ■ Show proper import statements and FQCN usage
+  - Create proper package hierarchy: com.airtripe.studentmanagement
+  - Implement at least 4 packages: entity, service, util, main
+  - Demonstrate package-private, public access across packages
+  - Show proper import statements and FQCN usage
