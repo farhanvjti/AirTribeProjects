@@ -8,17 +8,17 @@ import lombok.Setter;
 public class GraduateStudent extends Student{
     @Getter
     @Setter
-    private String gradDate;
+    private String specialization;
     public GraduateStudent(String name, String id,
                            String cohortName,
-                           String graduationDate) {
+                           String specialization) {
         super(name, id, cohortName);
-        this.gradDate = graduationDate;
+        this.specialization = specialization;
     }
     @Override
     public void displayInfo() {
         System.out.println("[GRADUATE] " + getName() +
                 " | Cohort: " + getCohortName() +
-                " | Graduated: " + getGradDate());
+                " | Graduated: " + getSpecialization());
     }
 }
