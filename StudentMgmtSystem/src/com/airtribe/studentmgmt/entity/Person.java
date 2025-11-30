@@ -6,25 +6,25 @@ import lombok.Setter;
 @Getter
 @Setter
 public abstract class Person {
-    protected String name;
     protected String id;
+    protected String name;
 
     //0-arg constructor
     public Person() {
     }
 
     //parameterized constructor
-    public Person(String name, String id) {
-        this.name = name;
+    public Person(String id, String name) {
         this.id = id;
+        this.name = name;
     }
 
     //copy constructor
     public Person(Person other){
-        this.name=other.name;
         this.id=other.id;
+        this.name=other.name;
     }
 
-    public abstract void displayInfo();
+    public abstract void printInfo(boolean showDetails);
 
 }

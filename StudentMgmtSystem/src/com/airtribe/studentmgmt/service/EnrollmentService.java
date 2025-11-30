@@ -16,4 +16,7 @@ public class EnrollmentService {
     public void displayEnrolledStudents(){
         enrollments.forEach(Enrollment::printEnrollment);
     }
+    public ArrayList<Enrollment> getEnrollments(){
+        return enrollments;
+    }
 }
