@@ -6,6 +6,7 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 @Setter
 @Getter
@@ -56,7 +57,7 @@ public class Patron extends Person {
                 "patronId='" + patronId + '\'' +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
+                ", phoneNumber='" + phoneNum + '\'' +
                 ", activeLoans=" + activeLoans.size() +
                 '}';
     }
