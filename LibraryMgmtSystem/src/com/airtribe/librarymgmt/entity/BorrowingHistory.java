@@ -6,16 +6,20 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
-/*
+
 public class BorrowingHistory {
-    private final List loans;
-    public BorrowingHistory(List loans) {
-        this.loans = Collections.unmodifiableList(new ArrayList<>(Objects.requireNonNull(loans)));
-    }
-    public List<Loan> getByStatus(LoanStatus status) {
-        return loans.stream()
-                .filter(l -> l.getStatus() == status)
-                .toList(); // Java 16+ has Stream.toList()
+    private final List<Loan> loans =  new ArrayList<>();
+    public void add(Loan loan) {
+        if (loan == null) throw new IllegalArgumentException("loan cannot be null");
+        loans.add(loan);
     }
 
-}*/
+    public List<Loan> getLoans() {
+        return Collections.unmodifiableList(loans);
+    }
+
+    @Override
+    public String toString() {
+        return "BorrowingHistory{loans=" + loans.size() + "}";
+    }
+}

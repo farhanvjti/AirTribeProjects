@@ -52,7 +52,7 @@ public class Loan {
         this.status = LoanStatus.RETURNED;
         bookCopy.setStatus(BookStatus.AVAILABLE);
         patron.removeActiveLoan(this);
-        patron.getBoorowingHistory().add(this);
+        patron.getBorrowingHistory().add(this);
 
     }
 
