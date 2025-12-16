@@ -43,7 +43,7 @@ public class Main{
         // 4. Checkout a book copy (Loan)
         Loan loan1 = new Loan(
                 patron, "L001", hobbitCopy2,
-                LocalDate.now(),  LocalDate.now().plusDays(14), LocalDate.now().plusDays(14)
+                LocalDate.now(),  LocalDate.now().plusDays(14)
         );
 
         System.out.println("After checkout:");

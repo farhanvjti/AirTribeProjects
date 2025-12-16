@@ -17,7 +17,7 @@ public class Loan {
     private final LocalDate dueDate;
     private LoanStatus status;
 
-    public Loan(Patron patron, String LOANID, BookCopy bookCopy, LocalDate checkoutDate, LocalDate returnDate, LocalDate dueDate) {
+    public Loan(Patron patron, String LOANID, BookCopy bookCopy, LocalDate checkoutDate, LocalDate dueDate) {
         if (LOANID == null || LOANID.isBlank()) throw new IllegalArgumentException("loanId is required");
         if (patron == null) throw new IllegalArgumentException("patron is required");
         if (bookCopy == null) throw new IllegalArgumentException("bookCopy is required");
@@ -28,7 +28,6 @@ public class Loan {
         this.LOANID = LOANID;
         this.bookCopy = bookCopy;
         this.checkoutDate = checkoutDate;
-        this.returnDate = returnDate;
         this.dueDate = dueDate;
         this.status = LoanStatus.ACTIVE;
         // When a loan is created, mark the copy as checked out
