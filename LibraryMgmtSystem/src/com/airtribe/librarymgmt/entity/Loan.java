@@ -35,6 +35,7 @@ public class Loan {
         bookCopy.setStatus(BookStatus.BORROWED);
         patron.addActiveLoan(this);
     }
+
     public boolean isOverdue(LocalDate asOf) {
         return status == LoanStatus.ACTIVE && dueDate.isBefore(asOf);
     }
