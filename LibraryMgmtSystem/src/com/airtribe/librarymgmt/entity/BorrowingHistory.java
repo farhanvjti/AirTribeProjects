@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
-
+/*
 public class BorrowingHistory {
     private final List loans;
     public BorrowingHistory(List loans) {
@@ -18,4 +18,4 @@ public class BorrowingHistory {
                 .toList(); // Java 16+ has Stream.toList()
     }
 
-}
+}*/
