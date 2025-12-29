@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean class="org.example.Car" id="car1">
+        <constructor-arg value="Purple"/>
+        <constructor-arg value="Toyota"/>
+        <constructor-arg value="EV"/>
+        <!-- Performing Dependency Injection of Engine into Car-->
+        <constructor-arg ref="engine1"/>
+    </bean>
+
+
+    <bean class="org.example.Car" id="car2" scope="prototype">
+<!--        <constructor-arg value="White"/>-->
+<!--        <constructor-arg value="Honda"/>-->
+<!--        <constructor-arg value="Diesel"/>-->
+<!--        <constructor-arg ref="engine2"/>-->
+        <property name="color" value="white"/>
+        <property name="company" value="Honda"/>
+        <property name="model" value="Diesel"/>
+        <property name="engine" ref="engine2"/>
+    </bean>
+    <bean class="org.example.Engine" id="engine1">
+        <constructor-arg value="EV"/>
+        <constructor-arg value="HighHP"/>
+    </bean>
+    <bean class="org.example.Engine" id="engine2">
+        <property name="type" value="diesel"/>
+        <property name="model" value="LowHP"/>
+    </bean>
+</beans>
